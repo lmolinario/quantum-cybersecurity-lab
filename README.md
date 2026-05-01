@@ -22,6 +22,22 @@ The goal is not to build a physical quantum computer, but to understand how quan
 - Post-Quantum Cryptography
 - Security implications of quantum computing
 
+## Open in Google Colab
+
+Run the notebooks directly in Google Colab without cloning the repository.
+
+| # | Notebook | Open in Colab |
+|---|---|---|
+| 01 | Quantum Computing Basics | [Open](https://colab.research.google.com/github/lmolinario/quantum-cybersecurity-lab/blob/main/notebooks/01_quantum_basics.ipynb) |
+| 02 | Qubits and Quantum Gates | [Open](https://colab.research.google.com/github/lmolinario/quantum-cybersecurity-lab/blob/main/notebooks/02_qubits_and_gates.ipynb) |
+| 03 | Bell States and Entanglement | [Open](https://colab.research.google.com/github/lmolinario/quantum-cybersecurity-lab/blob/main/notebooks/03_bell_states.ipynb) |
+| 04 | Grover's Algorithm | [Open](https://colab.research.google.com/github/lmolinario/quantum-cybersecurity-lab/blob/main/notebooks/04_grovers_algorithm.ipynb) |
+| 05 | Shor's Algorithm Toy Example | [Open](https://colab.research.google.com/github/lmolinario/quantum-cybersecurity-lab/blob/main/notebooks/05_shors_algorithm_toy_example.ipynb) |
+| 06 | Quantum Key Distribution and BB84 | [Open](https://colab.research.google.com/github/lmolinario/quantum-cybersecurity-lab/blob/main/notebooks/06_quantum_key_distribution_bb84.ipynb) |
+| 07 | Post-Quantum Cryptography | [Open](https://colab.research.google.com/github/lmolinario/quantum-cybersecurity-lab/blob/main/notebooks/07_post_quantum_cryptography.ipynb) |
+
+More details: [`docs/colab.md`](docs/colab.md).
+
 ## Repository Structure
 
 ```text
@@ -55,6 +71,7 @@ quantum-cybersecurity-lab/
 │
 ├── docs/
 │   ├── setup.md
+│   ├── colab.md
 │   ├── quantum_for_cybersecurity.md
 │   ├── post_quantum_crypto.md
 │   ├── ibm_quantum_notes.md
