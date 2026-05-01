@@ -2,6 +2,12 @@
 Bell-state circuit builders.
 
 Bell states are among the simplest examples of quantum entanglement.
+
+Note:
+    When measured only in the computational basis, Bell states that differ
+    only by a relative phase can produce the same measurement counts.
+    Distinguishing phase differences requires additional basis changes or
+    statevector-level analysis.
 """
 
 from qiskit import QuantumCircuit
