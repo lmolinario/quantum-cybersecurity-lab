@@ -34,20 +34,49 @@ quantum-cybersecurity-lab/
 │
 ├── src/
 │   ├── circuits/
+│   │   ├── basic_circuits.py
+│   │   ├── bell_states.py
+│   │   └── simulator_utils.py
 │   ├── algorithms/
+│   │   └── grover_toy.py
 │   └── crypto/
 │
 ├── docs/
+│   ├── setup.md
 │   ├── quantum_for_cybersecurity.md
 │   ├── post_quantum_crypto.md
-│   └── ibm_quantum_notes.md
+│   ├── ibm_quantum_notes.md
+│   └── security_impact_matrix.md
 │
 ├── experiments/
 │   ├── ibm_quantum/
 │   └── simulators/
+│       ├── run_basic_circuits.py
+│       ├── run_bell_states.py
+│       └── run_grover_toy.py
 │
 ├── references/
+│   └── bibliography.bib
+├── ROADMAP.md
 └── requirements.txt
+```
+
+## Quick Start
+
+```bash
+git clone https://github.com/lmolinario/quantum-cybersecurity-lab.git
+cd quantum-cybersecurity-lab
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run local simulator experiments:
+
+```bash
+python experiments/simulators/run_basic_circuits.py
+python experiments/simulators/run_bell_states.py
+python experiments/simulators/run_grover_toy.py
 ```
 
 ## Learning Roadmap
@@ -61,6 +90,8 @@ quantum-cybersecurity-lab/
 7. Post-Quantum Cryptography
 8. IBM Quantum experiments
 
+See also: [`ROADMAP.md`](ROADMAP.md).
+
 ## Cybersecurity Positioning
 
 This repository connects quantum computing fundamentals with cybersecurity-relevant questions:
@@ -70,6 +101,14 @@ This repository connects quantum computing fundamentals with cybersecurity-relev
 - What is the difference between QKD and PQC?
 - How should organizations think about quantum migration?
 - What does `harvest now, decrypt later` mean for long-term confidentiality?
+
+## Current Executable Experiments
+
+- Basic single-qubit circuits
+- Hadamard superposition demo
+- Phase demo
+- Bell-state circuits
+- Toy Grover search over a two-qubit space
 
 ## Status
 
