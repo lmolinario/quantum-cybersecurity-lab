@@ -2,7 +2,7 @@
 
 [![Python CI](https://github.com/lmolinario/quantum-cybersecurity-lab/actions/workflows/python-ci.yml/badge.svg)](https://github.com/lmolinario/quantum-cybersecurity-lab/actions/workflows/python-ci.yml)
 
-Educational notes, experiments, and practical references on quantum computing applied to cybersecurity, cryptography, and post-quantum security.
+Educational notes, executable notebooks, experiments, and practical references on quantum computing applied to cybersecurity, cryptography, and post-quantum security.
 
 ## Purpose
 
@@ -31,11 +31,18 @@ quantum-cybersecurity-lab/
 │       └── python-ci.yml
 ├── notebooks/
 │   ├── 01_quantum_basics.md
+│   ├── 01_quantum_basics.ipynb
 │   ├── 02_qubits_and_gates.md
+│   ├── 02_qubits_and_gates.ipynb
 │   ├── 03_bell_states.md
+│   ├── 03_bell_states.ipynb
 │   ├── 04_grovers_algorithm.md
+│   ├── 04_grovers_algorithm.ipynb
 │   ├── 05_shors_algorithm_toy_example.md
-│   └── 06_quantum_key_distribution_bb84.md
+│   ├── 05_shors_algorithm_toy_example.ipynb
+│   ├── 06_quantum_key_distribution_bb84.md
+│   ├── 06_quantum_key_distribution_bb84.ipynb
+│   └── 07_post_quantum_cryptography.ipynb
 │
 ├── src/
 │   ├── circuits/
@@ -60,6 +67,8 @@ quantum-cybersecurity-lab/
 │       ├── run_bell_states.py
 │       └── run_grover_toy.py
 │
+├── scripts/
+│   └── validate_notebooks.py
 ├── references/
 │   └── bibliography.bib
 ├── ROADMAP.md
@@ -84,9 +93,31 @@ python experiments/simulators/run_bell_states.py
 python experiments/simulators/run_grover_toy.py
 ```
 
+Validate notebooks:
+
+```bash
+python scripts/validate_notebooks.py
+```
+
+Open Jupyter:
+
+```bash
+jupyter notebook
+```
+
+## Executable Notebooks
+
+1. `01_quantum_basics.ipynb`
+2. `02_qubits_and_gates.ipynb`
+3. `03_bell_states.ipynb`
+4. `04_grovers_algorithm.ipynb`
+5. `05_shors_algorithm_toy_example.ipynb`
+6. `06_quantum_key_distribution_bb84.ipynb`
+7. `07_post_quantum_cryptography.ipynb`
+
 ## Continuous Integration
 
-A GitHub Actions workflow runs the simulator experiments automatically on pushes and pull requests to `main`.
+A GitHub Actions workflow validates the notebooks and runs the simulator experiments automatically on pushes and pull requests to `main`.
 
 Workflow file:
 
@@ -124,6 +155,7 @@ This repository connects quantum computing fundamentals with cybersecurity-relev
 - Phase demo
 - Bell-state circuits
 - Toy Grover search over a two-qubit space
+- Notebook JSON validation
 
 ## Status
 
