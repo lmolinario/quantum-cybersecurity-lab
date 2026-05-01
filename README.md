@@ -1,5 +1,7 @@
 # Quantum Cybersecurity Lab
 
+[![Python CI](https://github.com/lmolinario/quantum-cybersecurity-lab/actions/workflows/python-ci.yml/badge.svg)](https://github.com/lmolinario/quantum-cybersecurity-lab/actions/workflows/python-ci.yml)
+
 Educational notes, experiments, and practical references on quantum computing applied to cybersecurity, cryptography, and post-quantum security.
 
 ## Purpose
