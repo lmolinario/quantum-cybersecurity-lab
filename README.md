@@ -24,6 +24,9 @@ The goal is not to build a physical quantum computer, but to understand how quan
 
 ```text
 quantum-cybersecurity-lab/
+├── .github/
+│   └── workflows/
+│       └── python-ci.yml
 ├── notebooks/
 │   ├── 01_quantum_basics.md
 │   ├── 02_qubits_and_gates.md
@@ -77,6 +80,16 @@ Run local simulator experiments:
 python experiments/simulators/run_basic_circuits.py
 python experiments/simulators/run_bell_states.py
 python experiments/simulators/run_grover_toy.py
+```
+
+## Continuous Integration
+
+A GitHub Actions workflow runs the simulator experiments automatically on pushes and pull requests to `main`.
+
+Workflow file:
+
+```text
+.github/workflows/python-ci.yml
 ```
 
 ## Learning Roadmap
