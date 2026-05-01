@@ -1,0 +1,35 @@
+name: Python CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  simulator-checks:
+    name: Run simulator experiments
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run basic circuit experiments
+        run: python experiments/simulators/run_basic_circuits.py
+
+      - name: Run Bell-state experiments
+        run: python experiments/simulators/run_bell_states.py
+
+      - name: Run Grover toy experiment
+        run: python experiments/simulators/run_grover_toy.py
