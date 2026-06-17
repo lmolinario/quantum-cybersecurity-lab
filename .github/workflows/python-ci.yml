@@ -31,6 +31,9 @@ jobs:
       - name: Validate notebooks
         run: python scripts/validate_notebooks.py
 
+      - name: Compile inventory helper
+        run: python -m py_compile scripts/crypto_inventory.py
+
       - name: Run basic circuit experiments
         run: python experiments/simulators/run_basic_circuits.py
 
