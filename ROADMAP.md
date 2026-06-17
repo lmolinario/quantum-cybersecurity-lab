@@ -23,11 +23,25 @@ This roadmap defines the planned evolution of the Quantum Cybersecurity Lab.
 - [x] Quantum for cybersecurity overview
 - [x] Post-Quantum Cryptography overview
 - [x] Quantum security impact matrix
+- [x] Quantum-safe readiness checklist
+- [x] Lightweight cryptographic inventory helper
 - [ ] RSA and ECC threat model note
 - [ ] Symmetric key security note
 - [ ] Harvest-now-decrypt-later note
+- [ ] Digital-forensics evidence preservation note
 
-## Phase 4 - IBM Quantum
+## Phase 4 - Quantum-Safe Migration Lab
+
+- [x] Governance-first readiness model
+- [x] Minimum cryptographic inventory schema
+- [x] JSON/CSV inventory output
+- [ ] Certificate algorithm extraction with an optional external dependency
+- [ ] TLS endpoint batch input file
+- [ ] HTML or Markdown mini-report generation
+- [ ] Example inventory dataset for demonstration
+- [ ] Hybrid TLS/PQC notes based on OpenSSL/liboqs experimentation
+
+## Phase 5 - IBM Quantum
 
 - [x] IBM Quantum notes
 - [ ] IBM Quantum account setup guide
@@ -35,10 +49,11 @@ This roadmap defines the planned evolution of the Quantum Cybersecurity Lab.
 - [ ] Compare simulator vs real hardware
 - [ ] Noise analysis report
 
-## Phase 5 - Portfolio Maturity
+## Phase 6 - Portfolio Maturity
 
 - [ ] Convert Markdown notes into Jupyter notebooks
 - [ ] Add diagrams
 - [ ] Add references and citations
-- [ ] Add GitHub Actions basic checks
+- [x] Add GitHub Actions basic checks
+- [x] Add script compilation check
 - [ ] Add examples tested on multiple Python versions
