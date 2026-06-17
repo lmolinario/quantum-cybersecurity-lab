@@ -2,13 +2,13 @@
 
 [![Python CI](https://github.com/lmolinario/quantum-cybersecurity-lab/actions/workflows/python-ci.yml/badge.svg)](https://github.com/lmolinario/quantum-cybersecurity-lab/actions/workflows/python-ci.yml)
 
-Educational notes, executable notebooks, experiments, and practical references on quantum computing applied to cybersecurity, cryptography, and post-quantum security.
+Educational notes, executable notebooks, experiments, and practical references on quantum computing applied to cybersecurity, cryptography, post-quantum security, and quantum-safe readiness.
 
 ## Purpose
 
 This repository documents a practical learning path on quantum computing with a cybersecurity-oriented perspective.
 
-The goal is not to build a physical quantum computer, but to understand how quantum computing works, how quantum algorithms are executed, and what their long-term implications are for classical cryptography and cybersecurity.
+The goal is not to build a physical quantum computer, but to understand how quantum computing works, how quantum algorithms are executed, and what their long-term implications are for classical cryptography, cybersecurity governance, and post-quantum migration planning.
 
 ## Topics
 
@@ -20,6 +20,8 @@ The goal is not to build a physical quantum computer, but to understand how quan
 - Shor's algorithm on toy examples
 - Quantum Key Distribution
 - Post-Quantum Cryptography
+- Quantum-safe readiness assessment
+- Cryptographic inventory and migration planning
 - Security implications of quantum computing
 
 ## Open in Google Colab
@@ -74,6 +76,7 @@ quantum-cybersecurity-lab/
 │   ├── colab.md
 │   ├── quantum_for_cybersecurity.md
 │   ├── post_quantum_crypto.md
+│   ├── quantum_safe_readiness.md
 │   ├── ibm_quantum_notes.md
 │   └── security_impact_matrix.md
 │
@@ -85,7 +88,8 @@ quantum-cybersecurity-lab/
 │       └── run_grover_toy.py
 │
 ├── scripts/
-│   └── validate_notebooks.py
+│   ├── validate_notebooks.py
+│   └── crypto_inventory.py
 ├── references/
 │   └── bibliography.bib
 ├── ROADMAP.md
@@ -108,6 +112,13 @@ Run local simulator experiments:
 python experiments/simulators/run_basic_circuits.py
 python experiments/simulators/run_bell_states.py
 python experiments/simulators/run_grover_toy.py
+```
+
+Run the quantum-safe inventory helper:
+
+```bash
+python scripts/crypto_inventory.py --path . --format json
+python scripts/crypto_inventory.py --tls-endpoint example.com:443 --format json
 ```
 
 Validate notebooks:
@@ -134,7 +145,7 @@ jupyter notebook
 
 ## Continuous Integration
 
-A GitHub Actions workflow validates the notebooks and runs the simulator experiments automatically on pushes and pull requests to `main`.
+A GitHub Actions workflow validates the notebooks, compiles the inventory helper, and runs the simulator experiments automatically on pushes and pull requests to `main`.
 
 Workflow file:
 
@@ -151,7 +162,8 @@ Workflow file:
 5. Shor's algorithm on toy examples
 6. Quantum Key Distribution and BB84
 7. Post-Quantum Cryptography
-8. IBM Quantum experiments
+8. Quantum-safe readiness assessment
+9. IBM Quantum experiments
 
 See also: [`ROADMAP.md`](ROADMAP.md).
 
@@ -164,6 +176,17 @@ This repository connects quantum computing fundamentals with cybersecurity-relev
 - What is the difference between QKD and PQC?
 - How should organizations think about quantum migration?
 - What does `harvest now, decrypt later` mean for long-term confidentiality?
+- How can a cryptographic inventory support a quantum-safe transition program?
+
+## Quantum-Safe Readiness
+
+The repository now includes a governance-oriented readiness layer:
+
+- [`docs/quantum_safe_readiness.md`](docs/quantum_safe_readiness.md) defines a practical assessment workflow.
+- [`scripts/crypto_inventory.py`](scripts/crypto_inventory.py) performs a lightweight first-pass scan for cryptographic files, key material indicators, and TLS endpoint metadata.
+- [`docs/security_impact_matrix.md`](docs/security_impact_matrix.md) summarizes the operational impact of quantum computing on cryptographic controls.
+
+This layer is intended for learning, portfolio demonstration, and early-stage risk assessment. It does not replace a formal cryptographic audit.
 
 ## Current Executable Experiments
 
@@ -173,6 +196,7 @@ This repository connects quantum computing fundamentals with cybersecurity-relev
 - Bell-state circuits
 - Toy Grover search over a two-qubit space
 - Notebook JSON validation
+- Lightweight cryptographic inventory helper
 
 ## Status
 
